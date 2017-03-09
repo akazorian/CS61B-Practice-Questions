@@ -3,12 +3,12 @@
 % Head down to where it says "Start here"
 % --------------------------------------------------------------
 
-\documentclass[12pt]{article}
+\documentclass{article}
 
-\usepackage[margin=1in]{geometry}
-\usepackage{amsmath,amsthm,amssymb}
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage{amsmath,amsthm,amssymb,listings}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{margin=2cm} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
 \usepackage[english]{babel} % English language/hyphenation
 
 \usepackage{sectsty} % Allows customizing section commands
@@ -46,6 +46,33 @@
 
 \newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
 
+\usepackage{color}
+
+%New colors defined below
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codered}{RGB}{204,0,0}
+\definecolor{codeblue}{RGB}{0,128,255}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%Code listing style named "mystyle"
+\lstdefinestyle{mystyle}{
+  commentstyle=\color{codegreen},
+  keywordstyle=\color{codeblue},
+  stringstyle=\color{codegreen},
+  basicstyle=\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=true,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2
+}
+
+%"mystyle" code listing set
+\lstset{style=mystyle}
+
 \title{
 	\normalfont \normalsize
 	\textsc{CSM61B} \\ [25pt] % Your university, school and/or department name(s)
@@ -56,14 +83,9 @@
 
 \author{Alex Kazorian} % Your name
 
-\date{\normalsize\today} % Today's date or a custom date
-
 \begin{document}
 
-
 	\maketitle
-	\fontsize{12}{15}
-	\selectfont
 	\begin{Questions}
         % Question 1
 	    \Question
@@ -96,7 +118,26 @@
         Find the tightest bound of the function $f(n) = x \sin x^2$ in both the worst and best case.
 
         \Question
-        
+		Provide the worst and best runtime for the following methods in terms of $N$.
+			\begin{enumerate}
+				\item
+				Here consider $N$ to be the length of the array and $p$ to be initialized to $N$.
+				\begin{lstlisting}[language=Java]
+public void int foo(int[] fighters, int p) {
+	if (!p) {
+		return fighters[p];
+	}
+	if (p % 2 == 0) {
+		return foo(fighters, p / 2);
+	}
+	System.arraycopy(fighters, 0, fighters, 0, p + 1);
+	fighters[p] = p;
+	return foo(fighters, p + 1);
+}
+			\end{lstlisting}
+				% Answer for the above is worst case: N and best case: log N where N is the size of the input
+				\item
+			\end{enumerate}
 
 	\end{Questions}
 
