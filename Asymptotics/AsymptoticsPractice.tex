@@ -63,7 +63,7 @@
   breakatwhitespace=false,
   breaklines=true,
   captionpos=b,
-  keepspaces=true,
+  keepspaces=false,
   showspaces=false,
   showstringspaces=false,
   showtabs=false,
@@ -93,7 +93,7 @@
             \begin{enumerate}
                 \item $f_1(n) = 3^n$
                 \item $f_2(n) = \frac n 2$
-                \item $f_3(n) = 2^10000$
+                \item $f_3(n) = 2^{10000}$
                 \item $f_4(n) = 2^{\log_2 n}$
                 \item $f_5(n) = \log n$
                 \item $f_6(n) = n + n^2 \log n$
@@ -124,10 +124,10 @@
 				Here consider $N$ to be the length of the array and $p$ to be initialized to $N$.
 				\begin{lstlisting}[language=Java]
 public void int foo(int[] fighters, int p) {
-	if (!p) {
+	if (p != 0) {
 		return fighters[p];
 	}
-	if (p % 2 == 0) {
+	if (p % 2 = = 0) {
 		return foo(fighters, p / 2);
 	}
 	System.arraycopy(fighters, 0, fighters, 0, p + 1);
@@ -137,6 +137,8 @@ public void int foo(int[] fighters, int p) {
 			\end{lstlisting}
 				% Answer for the above is worst case: N and best case: log N where N is the size of the input
 				\item
+
+
 			\end{enumerate}
 
 	\end{Questions}

@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1489093184 "AsymptoticsPractice.tex" "AsymptoticsPractice.pdf" "AsymptoticsPractice" 1489093185
+["pdflatex"] 1489098063 "AsymptoticsPractice.tex" "AsymptoticsPractice.pdf" "AsymptoticsPractice" 1489098064
   "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -75,10 +75,10 @@
   "/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1479359831 1888048 f2c5faed5981a516f406b2ccc20bff71 ""
   "/usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1463979169 3873397 413fbfbbedb8e719ddc392043a7add02 ""
   "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
-  "AsymptoticsPractice.aux" 1489093185 166 db7e845c9605d9d9013124913d023cfd ""
-  "AsymptoticsPractice.tex" 1489093184 4719 1b471abbf5241b70d496194061ecb5f3 ""
+  "AsymptoticsPractice.aux" 1489098063 166 db7e845c9605d9d9013124913d023cfd ""
+  "AsymptoticsPractice.tex" 1489098063 4729 e81338a6914ab2c150c84e3663252c15 ""
   (generated)
   "AsymptoticsPractice.aux"
   "AsymptoticsPractice.toc"
-  "AsymptoticsPractice.pdf"
   "AsymptoticsPractice.log"
+  "AsymptoticsPractice.pdf"
