@@ -59,7 +59,7 @@
   commentstyle=\color{codegreen},
   keywordstyle=\color{codeblue},
   stringstyle=\color{codegreen},
-  basicstyle=\footnotesize,
+  basicstyle=\footnotesize\ttfamily,
   breakatwhitespace=false,
   breaklines=true,
   captionpos=b,
@@ -118,12 +118,12 @@
         Find the tightest bound of the function $f(n) = x \sin x^2$ in both the worst and best case.
 
         \Question
-		Provide the worst and best runtime for the following methods in terms of $N$.
+		Provide the worst and best runtime for the following methods in terms of $N$. However, if the notion of worst and best case runtime does not make sense for some program, then provide the single best asymptotic bound on the function.
 			\begin{enumerate}
 				\item
 				Here consider $N$ to be the length of the array and $p$ to be initialized to $N$.
 				\begin{lstlisting}[language=Java]
-public void int foo(int[] fighters, int p) {
+public int foo(int[] fighters, int p) {
 	if (p != 0) {
 		return fighters[p];
 	}
@@ -134,11 +134,24 @@ public void int foo(int[] fighters, int p) {
 	fighters[p] = p;
 	return foo(fighters, p + 1);
 }
-			\end{lstlisting}
+			    \end{lstlisting}
 				% Answer for the above is worst case: N and best case: log N where N is the size of the input
 				\item
-
-
+				Here consider $N$ to be the length of the array and assume $k$, $p$ are initialized to 0 and \texttt{seen} is an $N \text{ x } N$ matrix that is globally accessible.
+				\begin{lstlisting}[language=Java]
+public boolean jumpMan(int[] arr, int p, int k) {
+	if (k >= arr.length) {
+		seen[p][k] = 1;
+	} else if (seen[p][k] = = -1) {
+		seen[p][k] = jumpMan(arr, p + k, k)
+									|| jumpMan(arr, p + k - 1, k - 1)
+									|| jumpMan(arr, p + k + 1, k + 1);
+	} else {
+		return seen[p][k];
+	}
+}
+				\end{lstlisting}
+				% Answer for the above is O(n^2) as the notion of best case is not really a thing because the best case and worst case are the same.
 			\end{enumerate}
 
 	\end{Questions}
