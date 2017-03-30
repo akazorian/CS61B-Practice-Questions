@@ -77,7 +77,7 @@
 	\normalfont \normalsize
 	\textsc{CSM61B} \\ [25pt] % Your university, school and/or department name(s)
 	\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
-	\huge Asymptotics Practice Problems \\ % The assignment title
+	\huge Hashing Practice Problems \\ % The assignment title
 	\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
 }
 
@@ -88,72 +88,8 @@
 	\maketitle
 	\begin{Questions}
         % Question 1
-	    \Question
-        Order the following functions so that $f_i \in O(f_j) \Longleftrightarrow i < j$:
-            \begin{enumerate}
-                \item $f_1(n) = 3^n$
-                \item $f_2(n) = \frac n 2$
-                \item $f_3(n) = 2^{10000}$
-                \item $f_4(n) = 2^{\log_2 n}$
-                \item $f_5(n) = \log n$
-                \item $f_6(n) = n + n^2 \log n$
-                \item $f_7(n) = n!$
-                \item $f_8(n) = 1.001^n + n^3$
-            \end{enumerate}
+		\item
 
-        \Question
-        Provide the tightest bound on $f(n)$ in terms of $g(n)$ by saying $f = O(g)$, $f = \Omega(g)$, or $f = \Theta(g)$.
-            \begin{enumerate}
-                \item $f(n) = \log_2 n$ \\
-                      $g(n) = \log_3 n$
-                \item $f(n) = \log n^2 \\
-                       g(n) = \log n$
-                \item $f(n) = n - 100 \\
-                       g(n) = n + 10000$
-                \item $f(n) = 2^{1.1n} \\
-                       g(n) = \sum_i^n i^2$
-            \end{enumerate}
-
-        \Question
-        Find the tightest bound of the function $f(n) = x \sin x^2$ in both the worst and best case.
-
-        \Question
-		Provide the worst and best runtime for the following methods in terms of $N$. However, if the notion of worst and best case runtime does not make sense for some program, then provide the single best asymptotic bound on the function.
-			\begin{enumerate}
-				\item
-				Here consider $N$ to be the length of the array and $p$ to be initialized to $N$.
-				\begin{lstlisting}[language=Java]
-public int foo(int[] fighters, int p) {
-	if (p != 0) {
-		return fighters[p];
-	}
-	if (p % 2 = = 0) {
-		return foo(fighters, p / 2);
-	}
-	System.arraycopy(fighters, 0, fighters, 0, p + 1);
-	fighters[p] = p;
-	return foo(fighters, p + 1);
-}
-			    \end{lstlisting}
-				% Answer for the above is worst case: N and best case: log N where N is the size of the input
-				\item
-				Here consider $N$ to be the length of the array and assume $k$, $p$ are initialized to 0 and \texttt{seen} is an $N \text{ x } N$ matrix that is globally accessible.
-				\begin{lstlisting}[language=Java]
-public boolean jumpMan(boolean[] arr, int p, int k) {
-	if (k >= arr.length) {
-		seen[p][k] = 1;
-	} else if (arr[p] == false) {
-		seen[p][k] = 0
-	}
-	seen[p][k] = jumpMan(arr, p + k, k)
-							|| jumpMan(arr, p + k - 1, k - 1)
-							|| jumpMan(arr, p + k + 1, k + 1);
-	return seen[p][k];
-}
-				\end{lstlisting}
-				% NOTE: this was the bridge hopping question from the 170 homework. This is top-down w/ memoization.
-				% Answer for the above is O(n^2) as the notion of best case is not really a thing because the best case and worst case are the same.
-			\end{enumerate}
 
 	\end{Questions}
 
